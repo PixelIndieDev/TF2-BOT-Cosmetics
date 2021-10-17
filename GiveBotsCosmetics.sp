@@ -3,7 +3,7 @@
 
 #pragma semicolon 1
 
-#define PLUGIN_VERSION "1.10"
+#define PLUGIN_VERSION "1.0"
 
 bool g_bTouched[MAXPLAYERS+1];
 bool g_bMVM;
