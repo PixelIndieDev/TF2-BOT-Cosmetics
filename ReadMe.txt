@@ -1,4 +1,4 @@
-Compile the .SP to a .SMX and place it in [Your server name]\tf\addons\sourcemod\plugins
+(Compile the .SP to a .SMX and) place the .SMX it in [Your server name]\tf\addons\sourcemod\plugins
 Also place the give.bot.cosmetics.txt in [Your server name]\tf\addons\sourcemod\gamedata
 
 Use this website to compile the code: https://www.sourcemod.net/compiler.php
