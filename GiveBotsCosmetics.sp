@@ -16,7 +16,7 @@ Handle g_hGameConfig;
 
 public Plugin myinfo = 
 {
-	name = "Give Bots Cosmetics",
+	name = "TF2-BOT-Cosmetics",
 	author = "SenpaiKisser",
 	description = "Gives TF2 bots cosmetics",
 	version = PLUGIN_VERSION,
