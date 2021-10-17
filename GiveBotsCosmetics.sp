@@ -20,7 +20,7 @@ public Plugin myinfo =
 	author = "SenpaiKisser",
 	description = "Gives TF2 bots cosmetics",
 	version = PLUGIN_VERSION,
-	url = ""
+	url = "https://github.com/SenpaiKisser/TF2-BOT-Cosmetics"
 }
 
 public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max) 
