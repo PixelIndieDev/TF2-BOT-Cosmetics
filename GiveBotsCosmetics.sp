@@ -37,10 +37,10 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 
 public void OnPluginStart() 
 {
-	ConVar hCVversioncvar = CreateConVar("sm_gbc_version", PLUGIN_VERSION, "Give Bots Cosmetics version cvar", FCVAR_NOTIFY|FCVAR_DONTRECORD); 
-	g_hCVEnabled = CreateConVar("sm_gbc_enabled", "1", "Enables/disables this plugin", FCVAR_NONE, true, 0.0, true, 1.0);
-	g_hCVTimer = CreateConVar("sm_gbc_delay", "0.1", "Delay for giving cosmetics to bots", FCVAR_NONE, true, 0.1, true, 30.0);
-	g_hCVTeam = CreateConVar("sm_gbc_team", "1", "Team to give cosmetics to: 1-both, 2-red, 3-blu", FCVAR_NONE, true, 1.0, true, 3.0);
+	ConVar hCVversioncvar = CreateConVar("bot-cosmetics-version", PLUGIN_VERSION, "Give Bots Cosmetics version cvar", FCVAR_NOTIFY|FCVAR_DONTRECORD); 
+	g_hCVEnabled = CreateConVar("cosmetics_enabled", "1", "Enables/disables this plugin", FCVAR_NONE, true, 0.0, true, 1.0);
+	g_hCVTimer = CreateConVar("cosmetics_delay", "0.1", "Delay for giving cosmetics to bots", FCVAR_NONE, true, 0.1, true, 30.0);
+	g_hCVTeam = CreateConVar("cosmetics_team", "1", "Team to give cosmetics to: 1-both, 2-red, 3-blu", FCVAR_NONE, true, 1.0, true, 3.0);
 
 	HookEvent("post_inventory_application", player_inv);
 	HookConVarChange(g_hCVEnabled, OnEnabledChanged);
@@ -180,7 +180,7 @@ public Action Timer_GiveHat(Handle timer, any data)
 			{
 				case TFClass_Sniper:
 				{
-					int kwi = GetRandomUInt(0,1);
+					int kwi = GetRandomUInt(0,2);
 					switch (kwi)
 					{
 						case 0:
@@ -195,6 +195,13 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 783, 11); //Weird Sniper
 							CreateHat(client, 744, 11); //Weird Sniper
 							CreateHat(client, 30066, 11); //Weird Sniper
+							face = true;
+						}
+						case 2:
+						{
+							CreateHat(client, 260, 11); //Wiki Cap
+							CreateHat(client, 645, 11); //The Outback Intellectual
+							CreateHat(client, 646, 11); //The Itsy Bitsy Spyer
 							face = true;
 						}
 					}
@@ -233,9 +240,9 @@ public Action Timer_GiveHat(Handle timer, any data)
 					{
 						case 0:
 						{
-							CreateHat(client, 30397, 6); //Spy overval
-							CreateHat(client, 55, 6); //Spy overval
-							CreateHat(client, 30389, 6); //Spy overval
+							CreateHat(client, 30397, 6); //Spy
+							CreateHat(client, 55, 6); //Spy
+							CreateHat(client, 30389, 6); //Spy
 							face = true;
 						}
 						case 1:
@@ -249,7 +256,7 @@ public Action Timer_GiveHat(Handle timer, any data)
 				}
 				case TFClass_Scout:
 				{
-					int Z = GetRandomUInt(0,1);
+					int Z = GetRandomUInt(0,2);
 					switch (Z)
 					{
 						case 0:
@@ -266,11 +273,18 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30396, 6); //	The Red Socks
 							face = true;
 						}
+						case 2:
+						{
+							CreateHat(client, 106, 6); //Bonk Helm
+							CreateHat(client, 51, 6); //Bonk Boy
+							CreateHat(client, 1016, 6); //Buck Turner All-Stars
+							face = true;
+						}
 					}
 				}
 				case TFClass_Soldier:
 				{
-					int V = GetRandomUInt(0,1);
+					int V = GetRandomUInt(0,2);
 					switch (V)
 					{
 						case 0:
@@ -285,6 +299,13 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 54, 6); //Soldier's Stash
 							CreateHat(client, 650, 6); //The Kringle Collection
 							CreateHat(client, 30339, 6); //The Killer's Kit
+							face = true;
+						}
+						case 2:
+						{
+							CreateHat(client, 30314, 6); //he Slo-Poke
+							CreateHat(client, 30115, 6); //The Compatriot
+							CreateHat(client, 30085, 6); //The Macho MannThe Macho Mann
 							face = true;
 						}
 					}
@@ -315,7 +336,7 @@ public Action Timer_GiveHat(Handle timer, any data)
 				}
 				case TFClass_Heavy:
 				{
-					int S = GetRandomUInt(0,1);
+					int S = GetRandomUInt(0,2);
 					switch (S)
 					{
 						case 0:
@@ -329,6 +350,13 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 97, 6); //Tough Guy's Toque
 							CreateHat(client, 647, 6); //The All-Father
 							CreateHat(client, 738, 6); //Pet Balloonicorn
+							face = true;
+						}
+						case 2:
+						{
+							CreateHat(client, 524, 6); //The Purity Fist
+							CreateHat(client, 479, 6); //Security Shades
+							CreateHat(client, 478, 6); //Copper's Hard Top
 							face = true;
 						}
 					}
