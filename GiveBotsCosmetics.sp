@@ -180,7 +180,7 @@ public Action Timer_GiveHat(Handle timer, any data)
 			{
 				case TFClass_Sniper:
 				{
-					int kwi = GetRandomUInt(0,2);
+					int kwi = GetRandomUInt(0,3);
 					switch (kwi)
 					{
 						case 0:
@@ -202,6 +202,13 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 260, 11); //Wiki Cap
 							CreateHat(client, 645, 11); //The Outback Intellectual
 							CreateHat(client, 646, 11); //The Itsy Bitsy Spyer
+							face = true;
+						}
+						case 3:
+						{
+							CreateHat(client, 646, 11); //Itsy Bitsy Spyer
+							CreateHat(client, 647, 11); //The All-Father
+							CreateHat(client, 30971, 11); //Down Tundra Coat
 							face = true;
 						}
 					}
@@ -231,11 +238,25 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30323, 6); //The Ruffled Ruprecht
 							face = true;
 						}
+						case 3:
+						{
+							CreateHat(client, 30939, 6); //Coldfront Commander
+							CreateHat(client, 30940, 11); //Coldfront Carapace
+							CreateHat(client, 31099, 6); //Pocket-Medes
+							face = true;
+						}
+						case 4:
+						{
+							CreateHat(client, 826, 6); //Medi-Mask
+							CreateHat(client, 30171, 11); //Medical Mystery
+							CreateHat(client, 31099, 6); //Pocket-Medes
+							face = true;
+						}
 					}
 				}
 				case TFClass_Spy:
 				{
-					int Y = GetRandomUInt(0,1);
+					int Y = GetRandomUInt(0,3);
 					switch (Y)
 					{
 						case 0:
@@ -252,11 +273,25 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30389, 6); //Weeb Spy
 							face = true;
 						}
+						case 2:
+						{
+							CreateHat(client, 30752, 6); //Chicago Overcoat
+							CreateHat(client, 30753, 6); //A hat to kill for
+							CreateHat(client, 30775, 6); //Dead Head
+							face = true;
+						}
+						case 3:
+						{
+							CreateHat(client, 55, 6); //Fancy Fedora
+							CreateHat(client, 30602, 6); //Puffy Provocateur
+							CreateHat(client, 30775, 6); //Dead Head
+							face = true;
+						}
 					}
 				}
 				case TFClass_Scout:
 				{
-					int Z = GetRandomUInt(0,2);
+					int Z = GetRandomUInt(0,3);
 					switch (Z)
 					{
 						case 0:
@@ -280,11 +315,18 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 1016, 6); //Buck Turner All-Stars
 							face = true;
 						}
+						case 3:
+						{
+							CreateHat(client, 30888, 6); //Jungle Jersey
+							CreateHat(client, 30993, 6); //Punk's Pomp
+							CreateHat(client, 30540, 6); //Brooklyn Booties
+							face = true;
+						}
 					}
 				}
 				case TFClass_Soldier:
 				{
-					int V = GetRandomUInt(0,2);
+					int V = GetRandomUInt(0,3);
 					switch (V)
 					{
 						case 0:
@@ -308,11 +350,18 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30085, 6); //The Macho MannThe Macho Mann
 							face = true;
 						}
+						case 3:
+						{
+							CreateHat(client, 30897, 6); //Shellmet
+							CreateHat(client, 30601, 6); //Cold Snap Coat
+							CreateHat(client, 30339, 6); //Killer's Kit
+							face = true;
+						}
 					}
 				}
 				case TFClass_DemoMan:
 				{
-					int F = GetRandomUInt(0,1);
+					int F = GetRandomUInt(0,2);
 					switch (F)
 					{
 						case 0:
@@ -325,6 +374,7 @@ public Action Timer_GiveHat(Handle timer, any data)
 						{
 							CreateHat(client, 30305, 6); //The Sub Zero Suit
 							CreateHat(client, 30177, 6); //Hong Kong Cone
+							CreateHat(client, 30742, 6); //Shin Shredders
 							face = true;
 						}
 						case 2:
@@ -359,11 +409,18 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 478, 6); //Copper's Hard Top
 							face = true;
 						}
+						case 3:
+						{
+							CreateHat(client, 30743, 6); //Patroit Peak
+							CreateHat(client, 30913, 6); //Siberian Tigerstripe
+							CreateHat(client, 30960, 6); //Wild West Whiskers
+							face = true;
+						}
 					}
 				}
 				case TFClass_Pyro:
 				{
-					int H = GetRandomUInt(0,1);
+					int H = GetRandomUInt(0,4);
 					switch (H)
 					{
 						case 0:
@@ -380,11 +437,32 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30305, 6); //The Sub Zero Suit
 							face = true;
 						}
+						case 2:
+						{
+							CreateHat(client, 30838, 11); //Head Prize
+							CreateHat(client, 30367, 11); //The Cute Suit
+							CreateHat(client, 632, 14); //Cremator's Conscience
+							face = true;
+						}
+						case 3:
+						{
+							CreateHat(client, 30986, 6); //Hot Case
+							CreateHat(client, 31096, 6); //Discovision
+							CreateHat(client, 105, 6); //Brigade Helm
+							face = true;
+						}
+						case 4:
+						{
+							CreateHat(client, 597, 6); //Bubble Pipe
+							CreateHat(client, 632, 14); //Cremator's Conscience
+							CreateHat(client, 31026, 6); //Pocket Pardner
+							face = true;
+						}
 					}
 				}
 				case TFClass_Engineer:
 				{
-					int U = GetRandomUInt(0,1);
+					int U = GetRandomUInt(0,3);
 					switch (U)
 					{
 						case 0:
@@ -401,13 +479,27 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30420, 6); //Uncle Dane
 							face = true;
 						}
+						case 2:
+						{
+							CreateHat(client, 30785, 6); //Dad Duds
+							CreateHat(client, 30846, 6); //Plumber's Cap
+							CreateHat(client, 386, 14); //Teddy Roosebelt
+							face = true;
+						}
+						case 3:
+						{
+							CreateHat(client, 30878, 6); //Quizzical Quetzal
+							CreateHat(client, 31032, 6); //Puggyback
+							CreateHat(client, 31086, 14); //Pebbles the Penguin
+							face = true;
+						}
 					}
 				}
 			}
 		}
 			case 1:
 		{
-		int N = GetRandomUInt(0,51);
+		int N = GetRandomUInt(0,54);
 		switch (N)
 		{
 			case 1:
@@ -618,6 +710,18 @@ public Action Timer_GiveHat(Handle timer, any data)
 			{
 				CreateHat(client, 30643, 6); //Potassium Bonnett
 			}
+			case 52:
+			{
+				CreateHat(client, 30743, 11); //Patriot Peak
+			}
+			case 53:
+			{
+				CreateHat(client, 30814, 11); //Lil' Bitey
+			}
+			case 54:
+			{
+				CreateHat(client, 30808, 11); //Class Crown
+			}
 		}
 		
 		if ( !face )
@@ -778,6 +882,14 @@ public Action Timer_GiveHat(Handle timer, any data)
 			case 25:
 			{
 				CreateHat(client, 718, 6); //Merc Medal
+			}
+			case 26:
+			{
+				CreateHat(client, 31018, 14); //Polar Pal
+			}
+			case 27:
+			{
+				CreateHat(client, 31086, 14); //Pebbles the Penguin
 			}
 		}
 	}	
