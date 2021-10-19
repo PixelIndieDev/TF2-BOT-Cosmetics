@@ -13,3 +13,4 @@ Download SourceMod here: https://www.sourcemod.net/downloads.php?branch=stable
 Use this website to compile the code: https://www.sourcemod.net/compiler.php
 Use this website to find new cosmetic combinations: https://loadout.tf/
 Here I get all my cosmetic codes (Not all cosmetcis are available here): https://wiki.alliedmods.net/Team_fortress_2_item_definition_indexes
+You can also use: http://www.tf2tools.net/utilities/schema
