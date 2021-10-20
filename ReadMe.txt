@@ -3,7 +3,7 @@ For this addon to work on servers you will need
 - SourceMod
 
 (Compile the .SP to a .SMX and) place the .SMX it in [Your server name]\tf\addons\sourcemod\plugins
-Also place the give.bot.cosmetics.txt in [Your server name]\tf\addons\sourcemod\gamedata
+Also place the TF2-BOT-Cosmetics.txt in [Your server name]\tf\addons\sourcemod\gamedata
 
 
 
