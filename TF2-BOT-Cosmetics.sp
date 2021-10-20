@@ -5,6 +5,24 @@
 
 #define PLUGIN_VERSION "1.1"
 
+//	Qualities
+// Normal = 0
+// Unique = 6
+// Rarity1 = 1 
+// Rarity2 = 2
+// Rarity3 = 4
+// Rarity4 = 5
+// Vintage = 3
+// Community = 7
+// Developer = 8
+// Selfmade = 9
+// Customized = 10
+// Strange = 11
+// Completed = 12
+// Haunted = 13
+// Collectors = 14
+// Paintkitweapon = 15
+
 bool g_bTouched[MAXPLAYERS+1];
 bool g_bMVM;
 bool g_bLateLoad;
@@ -180,7 +198,7 @@ public Action Timer_GiveHat(Handle timer, any data)
 			{
 				case TFClass_Sniper:
 				{
-					int kwi = GetRandomUInt(0,3);
+					int kwi = GetRandomUInt(0,4);
 					switch (kwi)
 					{
 						case 0:
@@ -211,11 +229,18 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30971, 11); //Down Tundra Coat
 							face = true;
 						}
+						case 4:
+						{
+							CreateHat(client, 626, 6); //Swagman's Swatter
+							CreateHat(client, 645, 6); //Outback Intellectual
+							CreateHat(client, 987, 6); //Merc's Muffler
+							face = true;
+						}
 					}
 				}
 				case TFClass_Medic:
 				{
-					int X = GetRandomUInt(0,2);
+					int X = GetRandomUInt(0,5);
 					switch (X)
 					{
 						case 0:
@@ -252,11 +277,18 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 31099, 6); //Pocket-Medes
 							face = true;
 						}
+						case 5:
+						{
+							CreateHat(client, 383, 6); //Grimm Hatte
+							CreateHat(client, 315, 11); //Blighted Beak
+							CreateHat(client, 828, 6); //Archimedes
+							face = true;
+						}
 					}
 				}
 				case TFClass_Spy:
 				{
-					int Y = GetRandomUInt(0,3);
+					int Y = GetRandomUInt(0,4);
 					switch (Y)
 					{
 						case 0:
@@ -287,11 +319,18 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30775, 6); //Dead Head
 							face = true;
 						}
+						case 4:
+						{
+							CreateHat(client, 397, 6); //Charmer's Chapeau
+							CreateHat(client, 766, 6); //Doublecross-Comm
+							CreateHat(client, 30631, 6); //Lurker's Leathers
+							face = true;
+						}
 					}
 				}
 				case TFClass_Scout:
 				{
-					int Z = GetRandomUInt(0,3);
+					int Z = GetRandomUInt(0,5);
 					switch (Z)
 					{
 						case 0:
@@ -322,11 +361,25 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30540, 6); //Brooklyn Booties
 							face = true;
 						}
+						case 4:
+						{
+							CreateHat(client, 722, 6); //Fast Learner
+							CreateHat(client, 30754, 6); //Hot Heels
+							CreateHat(client, 31023, 6); //Millennial Mercenary
+							face = true;
+						}
+						case 5:
+						{
+							CreateHat(client, 30636, 6); //Fortunate Son
+							CreateHat(client, 30637, 6); //Flak Jack
+							CreateHat(client, 30889, 6); //Transparent Trousers
+							face = true;
+						}
 					}
 				}
 				case TFClass_Soldier:
 				{
-					int V = GetRandomUInt(0,3);
+					int V = GetRandomUInt(0,4);
 					switch (V)
 					{
 						case 0:
@@ -357,11 +410,18 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30339, 6); //Killer's Kit
 							face = true;
 						}
+						case 4:
+						{
+							CreateHat(client, 152, 6); //Killer's Kabuto
+							CreateHat(client, 875, 6); //Menpo
+							CreateHat(client, 30126, 6); //Shogun's Shoulder Guard
+							face = true;
+						}
 					}
 				}
 				case TFClass_DemoMan:
 				{
-					int F = GetRandomUInt(0,2);
+					int F = GetRandomUInt(0,6);
 					switch (F)
 					{
 						case 0:
@@ -382,11 +442,39 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30305, 6); //The Cool Breeze
 							CreateHat(client, 30064, 6); //The Tartan Shade
 						}
+						case 3:
+						{
+							CreateHat(client, 342, 6); //Prince Tavish Crown
+							CreateHat(client, 874, 6); //King Of Scotland Cape
+							CreateHat(client, 30305, 6); //Cool Breeze
+							face = true;
+						}
+						case 4:
+						{
+							CreateHat(client, 100, 6); //Glengarry Bonnet
+							CreateHat(client, 830, 6); //Bearded Bombardier
+							CreateHat(client, 30333, 6); //Highland High Heels
+							face = true;
+						}
+						case 5:
+						{
+							CreateHat(client, 30179, 6); //Hurt Locher
+							CreateHat(client, 30945, 6); //Blast Blocker
+							CreateHat(client, 30979, 11); //Frag Proof Fragger
+							face = true;
+						}
+						case 6:
+						{
+							CreateHat(client, 816, 6); //Marxman
+							CreateHat(client, 30178, 6); //Weight Room Warmer
+							CreateHat(client, 1016, 6); //Buck Turner All-Stars
+							face = true;
+						}
 					}
 				}
 				case TFClass_Heavy:
 				{
-					int S = GetRandomUInt(0,2);
+					int S = GetRandomUInt(0,4);
 					switch (S)
 					{
 						case 0:
@@ -414,6 +502,13 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 30743, 6); //Patroit Peak
 							CreateHat(client, 30913, 6); //Siberian Tigerstripe
 							CreateHat(client, 30960, 6); //Wild West Whiskers
+							face = true;
+						}
+						case 4:
+						{
+							CreateHat(client, 145, 6); //Hound Dog
+							CreateHat(client, 30165, 6); //Cuban Bristle Crisis
+							CreateHat(client, 30108, 6); //Borscht Belt
 							face = true;
 						}
 					}
@@ -462,7 +557,7 @@ public Action Timer_GiveHat(Handle timer, any data)
 				}
 				case TFClass_Engineer:
 				{
-					int U = GetRandomUInt(0,3);
+					int U = GetRandomUInt(0,4);
 					switch (U)
 					{
 						case 0:
@@ -493,13 +588,20 @@ public Action Timer_GiveHat(Handle timer, any data)
 							CreateHat(client, 31086, 14); //Pebbles the Penguin
 							face = true;
 						}
+						case 4:
+						{
+							CreateHat(client, 338, 6); //Industrial Festivizer
+							CreateHat(client, 30322, 6); //Face Full Of Festive
+							CreateHat(client, 30539, 6); //Insulated Inventor
+							face = true;
+						}
 					}
 				}
 			}
 		}
 			case 1:
 		{
-		int N = GetRandomUInt(0,54);
+		int N = GetRandomUInt(0,56);
 		switch (N)
 		{
 			case 1:
@@ -722,11 +824,19 @@ public Action Timer_GiveHat(Handle timer, any data)
 			{
 				CreateHat(client, 30808, 11); //Class Crown
 			}
+			case 55:
+			{
+				CreateHat(client, 143, 6); //Earbuds
+			}
+			case 56:
+			{
+				CreateHat(client, 30877, 6); //Hunter in Darkness
+			}
 		}
 		
 		if ( !face )
 		{
-			int rnd2 = GetRandomUInt(0,12);
+			int rnd2 = GetRandomUInt(0,13);
 			switch (rnd2)
 			{
 				case 1:
@@ -776,11 +886,15 @@ public Action Timer_GiveHat(Handle timer, any data)
 				case 12:
 				{
 					CreateHat(client, 30522, 6); //Supernatural Stalker
-				}	
+				}
+				case 13:
+				{
+					CreateHat(client, 1033, 6); //TF2VRH
+				}
 			}
 		}
 		
-		int rnd3 = GetRandomUInt(0,25);
+		int rnd3 = GetRandomUInt(0,28);
 		switch (rnd3)
 		{
 			case 1:
@@ -890,6 +1004,10 @@ public Action Timer_GiveHat(Handle timer, any data)
 			case 27:
 			{
 				CreateHat(client, 31086, 14); //Pebbles the Penguin
+			}
+			case 28:
+			{
+				CreateHat(client, 30923, 14); //Sledder's Sidekick
 			}
 		}
 	}	
