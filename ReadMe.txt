@@ -1,3 +1,6 @@
+This plugin can cause memory leaks on updated TF2 servers
+
+
 For this addon to work on servers you will need
 - Metamod:Source
 - SourceMod
